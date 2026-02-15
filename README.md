@@ -1,21 +1,37 @@
 # miniresume-Kavya_Junuthula
-# Mini Resume Collector Application
+
+This is a REST API built using Django and Django REST Framework to collect candidate resume details.
+
+The application:
+- Accepts resume data via API
+- Performs input validation
+- Stores data in memory (no database persistence)
+- Exposes structured REST endpoints
+
+---
 
 ## Python Version Used
+
 Python 3.10
+
+---
 
 ## Installation Steps
 
 1. Clone the repository
-git clone https://github.com/your-username/miniresume-Kavya_Junuthula.git
 
-2. Navigate to project folder
-cd miniresume-Kavya_Junuthula
+git clone https://github.com/your-username/miniresume-your-full-name.git
 
-3. Create virtual environment
+2. Navigate into the project folder
+
+cd miniresume-your-full-name
+
+3. Create a virtual environment
+
 python -m venv venv
 
-4. Activate virtual environment
+4. Activate the virtual environment
+
 Windows:
 venv\Scripts\activate
 
@@ -23,53 +39,88 @@ Mac/Linux:
 source venv/bin/activate
 
 5. Install dependencies
+
 pip install -r requirements.txt
 
-## Run the Application
+---
+
+## Steps to Run the Application
+
+Run the Django development server:
 
 python manage.py runserver
 
-Server runs at:
+The application will run at:
+
 http://127.0.0.1:8000/
 
-## API Endpoints
+---
 
-### Health Check
+## Example API Request and Response
+
+### 1. Health Check
+
+Request:
+
 GET /health/
 
-Response:
-200 OK
+Response (200 OK):
+
 {
     "status": "healthy"
 }
 
-### Submit Resume
+---
+
+### 2. Submit Resume
+
+Request:
+
 POST /resumes/
 
-Request Body:
+Request Body (JSON):
+
 {
-    "full_name": "Kavya Junuthula",
-    "email": "kavya@example.com",
+    "full_name": "John Doe",
+    "email": "john@example.com",
     "phone": "+919876543210",
     "skills": ["Python", "Django"],
     "experience": 3
 }
 
-Response:
-201 Created
+Response (201 Created):
+
 {
     "message": "Resume submitted successfully",
     "data": {
-        ...
+        "full_name": "John Doe",
+        "email": "john@example.com",
+        "phone": "+919876543210",
+        "skills": ["Python", "Django"],
+        "experience": 3
     }
 }
 
-### List Resumes
+---
+
+### 3. List Resumes
+
+Request:
+
 GET /resumes/list/
 
-Response:
-200 OK
+Response (200 OK):
+
 {
     "count": 1,
-    "resumes": [...]
+    "resumes": [
+        {
+            "full_name": "John Doe",
+            "email": "john@example.com",
+            "phone": "+919876543210",
+            "skills": ["Python", "Django"],
+            "experience": 3
+        }
+    ]
 }
+
