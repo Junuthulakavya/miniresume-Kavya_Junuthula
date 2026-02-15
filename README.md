@@ -7,10 +7,10 @@ Python 3.10
 ## Installation Steps
 
 1. Clone the repository
-git clone https://github.com/your-username/miniresume-your-full-name.git
+git clone https://github.com/your-username/miniresume-Kavya_Junuthula.git
 
 2. Navigate to project folder
-cd miniresume-your-full-name
+cd miniresume-Kavya_Junuthula
 
 3. Create virtual environment
 python -m venv venv
@@ -48,8 +48,8 @@ POST /resumes/
 
 Request Body:
 {
-    "full_name": "John Doe",
-    "email": "john@example.com",
+    "full_name": "Kavya Junuthula",
+    "email": "kavya@example.com",
     "phone": "+919876543210",
     "skills": ["Python", "Django"],
     "experience": 3
