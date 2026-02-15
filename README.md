@@ -20,7 +20,7 @@ Python 3.10
 
 1. Clone the repository
 
-git clone https://github.com/your-username/miniresume-your-full-name.git
+git clone https://github.com/your-username/miniresume-Kavya_Junuthula.git
 
 2. Navigate into the project folder
 
@@ -81,8 +81,8 @@ POST /resumes/
 Request Body (JSON):
 
 {
-    "full_name": "John Doe",
-    "email": "john@example.com",
+    "full_name": "Kavya junuthula",
+    "email": "Kavya@example.com",
     "phone": "+919876543210",
     "skills": ["Python", "Django"],
     "experience": 3
@@ -93,8 +93,8 @@ Response (201 Created):
 {
     "message": "Resume submitted successfully",
     "data": {
-        "full_name": "John Doe",
-        "email": "john@example.com",
+        "full_name": "Kavya",
+        "email": "Kavya@example.com",
         "phone": "+919876543210",
         "skills": ["Python", "Django"],
         "experience": 3
@@ -115,8 +115,8 @@ Response (200 OK):
     "count": 1,
     "resumes": [
         {
-            "full_name": "John Doe",
-            "email": "john@example.com",
+            "full_name": "Kavya",
+            "email": "Kavya@example.com",
             "phone": "+919876543210",
             "skills": ["Python", "Django"],
             "experience": 3
